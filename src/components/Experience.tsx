@@ -1,5 +1,5 @@
 
-import { Calendar, MapPin, Award } from "lucide-react";
+import { Calendar, MapPin, Award, GraduationCap } from "lucide-react";
 
 const Experience = () => {
   const timeline = [
@@ -10,7 +10,8 @@ const Experience = () => {
       location: "Surat, Gujarat",
       description: "Mastering modern frontend technologies through hands-on projects and continuous learning. Building responsive web applications and exploring new frameworks.",
       highlights: ["React.js Mastery", "JavaScript ES6+", "Responsive Design", "Modern CSS Frameworks"],
-      color: "emerald"
+      color: "emerald",
+      type: "experience"
     },
     {
       year: "2023 - 2024",
@@ -19,7 +20,8 @@ const Experience = () => {
       location: "Surat, Gujarat", 
       description: "Developed multiple e-commerce websites and interactive web applications, focusing on user experience and clean code architecture.",
       highlights: ["E-commerce Development", "UI/UX Implementation", "Bootstrap & Tailwind", "API Integration"],
-      color: "amber"
+      color: "amber",
+      type: "experience"
     },
     {
       year: "2022 - 2023",
@@ -28,7 +30,18 @@ const Experience = () => {
       location: "Surat, Gujarat",
       description: "Built strong foundation in web technologies, starting with HTML, CSS, and JavaScript fundamentals.",
       highlights: ["HTML5 & CSS3", "JavaScript Basics", "Web Standards", "Problem Solving"],
-      color: "orange"
+      color: "orange",
+      type: "experience"
+    },
+    {
+      year: "2021 - 2024",
+      title: "Bachelor of Computer Applications",
+      company: "Veer Narmad South Gujarat University",
+      location: "Surat, Gujarat",
+      description: "Comprehensive study of computer science fundamentals, programming languages, and software development principles with focus on practical applications.",
+      highlights: ["Computer Science Fundamentals", "Database Management", "Software Engineering", "Data Structures"],
+      color: "blue",
+      type: "education"
     }
   ];
 
@@ -60,16 +73,20 @@ const Experience = () => {
 
                 {/* Content card */}
                 <div className={`ml-20 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
-                  <div className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-${item.color}-500/20 hover:border-${item.color}-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-${item.color}-500/20`}>
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`px-3 py-1 bg-${item.color}-500/20 text-${item.color}-400 rounded-full text-sm font-medium border border-${item.color}-500/30`}>
+                      <div className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-medium border border-emerald-500/30">
                         {item.year}
                       </div>
-                      <Award className={`w-5 h-5 text-${item.color}-400`} />
+                      {item.type === 'education' ? (
+                        <GraduationCap className="w-5 h-5 text-emerald-400" />
+                      ) : (
+                        <Award className="w-5 h-5 text-emerald-400" />
+                      )}
                     </div>
                     
                     <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <div className="flex items-center text-gray-400 mb-4">
+                    <div className="flex items-center text-emerald-300 mb-4">
                       <span className="font-medium">{item.company}</span>
                       <span className="mx-2">•</span>
                       <MapPin className="w-4 h-4 mr-1" />
@@ -82,7 +99,7 @@ const Experience = () => {
                       {item.highlights.map((highlight, idx) => (
                         <span
                           key={idx}
-                          className={`px-2 py-1 bg-${item.color}-500/10 text-${item.color}-300 rounded-lg text-xs font-medium border border-${item.color}-500/20`}
+                          className="px-2 py-1 bg-emerald-500/10 text-emerald-300 rounded-lg text-xs font-medium border border-emerald-500/20"
                         >
                           {highlight}
                         </span>
