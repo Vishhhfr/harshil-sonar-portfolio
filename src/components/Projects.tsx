@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, ShoppingCart, Layers, Rocket, Star } from "lucide-react";
+import { ShoppingCart, Layers, Rocket, Star } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -106,7 +106,7 @@ const Projects = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="mb-8">
+                <div>
                   <h4 className="text-amber-400 font-bold mb-3">Tech Stack</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
@@ -118,18 +118,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex space-x-4">
-                  <button className="flex-1 flex items-center justify-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-2xl font-bold hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/30">
-                    <ExternalLink className="w-5 h-5 mr-2" />
-                    Live Demo
-                  </button>
-                  <button className="flex-1 flex items-center justify-center px-6 py-3 border-2 border-amber-400/50 text-amber-400 rounded-2xl font-bold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-400/30">
-                    <Github className="w-5 h-5 mr-2" />
-                    View Code
-                  </button>
                 </div>
               </div>
             </div>
