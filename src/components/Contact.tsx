@@ -60,7 +60,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/harshil-sonar-b3223341",
+      href: "https://linkedin.com/in/harshil-sonar-b32273341",
       gradient: "from-blue-600 to-blue-800",
       hoverColor: "hover:text-blue-400"
     }
